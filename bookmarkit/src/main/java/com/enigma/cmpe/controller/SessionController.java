@@ -32,15 +32,22 @@ import com.mongodb.ServerAddress;
 
 public class SessionController extends HttpServlet {
 
-	private static UserDAO userDAO;
+	private final UserDAO userDAO;
+	// HashMap<String, String> sessionState = new HashMap<String, String>();
+	private final sessionDAO sessionDAO;
+	
+	final DB blogDatabase;
 
-	private static sessionDAO sessionDAO;
-
-	@SuppressWarnings("static-access")
 	public SessionController() throws UnknownHostException {
-		
-		userDAO = userDAO.getInstance();
-		sessionDAO = sessionDAO.getInstance();
+		MongoClient mongoClient = new MongoClient(new ServerAddress(
+				"localhost", 27017));
+		// final MongoClient mongoClient = new MongoClient(new
+		// MongoClientURI(mongoURIString));
+		blogDatabase = mongoClient.getDB("bookmarkit");
+
+		// blogPostDAO = new BlogPostDAO(blogDatabase);
+		userDAO = new UserDAO(blogDatabase);
+		sessionDAO = new sessionDAO(blogDatabase);
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)

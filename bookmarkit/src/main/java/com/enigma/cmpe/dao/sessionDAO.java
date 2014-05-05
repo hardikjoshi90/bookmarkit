@@ -36,13 +36,13 @@ public class sessionDAO extends Thread implements Runnable {
 	        return session.getString("_id");
 	    }
 	    
-	    public void endSession(String sessionID) {
-	        sessionsCollection.remove(new BasicDBObject("_id", sessionID));
+	    public void endSession(String username) {
+	        sessionsCollection.remove(new BasicDBObject("username", username));
 	    }
 
 	    // retrieves the session from the sessions table
-	    public DBObject getSession(String sessionID) {
-	        return sessionsCollection.findOne(new BasicDBObject("_id", sessionID));
+	    public DBObject getSession(String username) {
+	        return sessionsCollection.findOne(new BasicDBObject("username", username));
 	    }
 
 }

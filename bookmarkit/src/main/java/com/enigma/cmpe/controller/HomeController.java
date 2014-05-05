@@ -7,28 +7,29 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.junit.runner.Request;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.client.HttpServerErrorException;
 
-import com.mongodb.*;
-import com.enigma.cmpe.dao.sessionDAO;
+import com.enigma.cmpe.dao.MailMail;
 import com.enigma.cmpe.dao.UserDAO;
+import com.enigma.cmpe.dao.sessionDAO;
+import com.enigma.cmpe.domain.contactUs;
 import com.enigma.cmpe.domain.signUp;
+import com.mongodb.DB;
+import com.mongodb.MongoClient;
+import com.mongodb.ServerAddress;
 
 
 /**
@@ -101,20 +102,19 @@ public class HomeController extends HttpServlet {
 	@RequestMapping(value = "/signUp", method = RequestMethod.POST)
 	public @ResponseBody
 	String signUpPost(@ModelAttribute("login") signUp signUp, Model model,
-			HttpServletResponse response) throws IOException {
-		String username = signUp.getUsername();
-		String password = signUp.getPassword();
-		String verify = signUp.getVerifiedPassword();
-		String email = signUp.getEmail();
-		String fname = signUp.getFname();
-		String lname = signUp.getLname();
-		String gender = signUp.getGender();
+			HttpServletResponse response, HttpServletRequest request) throws IOException {
+		String username = request.getParameter("uname") ;
+		String password = request.getParameter("password") ;
+		String email = request.getParameter("email") ;
+		String fname = request.getParameter("fname") ;
+		String lname = request.getParameter("lname") ;
+		String gender = request.getParameter("gender") ;
 		HashMap<String, String> root = new HashMap<String, String>();
 
 		root.put("username", username);
 		root.put("email", password);
 
-		if (validateSignup(username, password, verify, email, root)) {
+		if (validateSignup(username, password, email, root)) {
 			// good user
 			System.out.println("Signup: Creating user with: " + username + " "
 					+ password);
@@ -134,7 +134,7 @@ public class HomeController extends HttpServlet {
 	
 
 	public boolean validateSignup(String username, String password,
-			String verify, String email, HashMap<String, String> errors) {
+			 String email, HashMap<String, String> errors) {
 		String USER_RE = "^[a-zA-Z0-9_-]{3,20}$";
 		String PASS_RE = "^.{3,20}$";
 		String EMAIL_RE = "^[\\S]+@[\\S]+\\.[\\S]+$";
@@ -155,10 +155,7 @@ public class HomeController extends HttpServlet {
 			return false;
 		}
 
-		if (!password.equals(verify)) {
-			errors.put("verify_error", "password must match");
-			return false;
-		}
+		
 
 		if (!email.equals("")) {
 			if (!email.matches(EMAIL_RE)) {
@@ -168,6 +165,22 @@ public class HomeController extends HttpServlet {
 		}
 
 		return true;
+	}
+	
+	@RequestMapping(value = "/contact", method = RequestMethod.POST)
+	public void SubmitForum(@ModelAttribute("forum")contactUs forum)
+	{
+		System.out.println("Sending Email");
+		String filepath ="E:\\CMPE-273\\STS WorkSpace\\bookmarkit\\src\\main\\webapp\\WEB-INF\\spring\\Spring-Mail.xml";
+    	ApplicationContext context = new FileSystemXmlApplicationContext(filepath);
+           	MailMail mm = (MailMail) context.getBean("mailMail");
+           	contactUs cu = new contactUs();
+           	cu.setFrom("hardikjoshi90@gmail.com");
+           	cu.setTo("shah.naiya8291@gmail.com");
+           	cu.setSubject("BookmarkIt Test");
+           	cu.setMsg("You are getting this email as a part of testing");
+           	
+           mm.sendMail(cu.getFrom(),cu.getTo(),cu.getSubject(),cu.getMsg());
 	}
 
 }

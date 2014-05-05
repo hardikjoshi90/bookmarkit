@@ -5115,6 +5115,7 @@ button.close {
   position: relative;
   width: auto;
   margin: 10px;
+  margin: -335px 0 0 -280px;
 }
 .modal-content {
   position: relative;

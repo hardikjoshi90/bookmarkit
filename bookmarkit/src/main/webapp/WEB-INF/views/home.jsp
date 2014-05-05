@@ -4,13 +4,15 @@
 <head>
 	<title>Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="<c:url value="/resources/css/fixed-top.css" />" rel="stylesheet">
+	
 	<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
 </head>
 
 <body>
- 	<div class="navbar navbar-fixed-top navbar-inverse" role="navigation"> <!-- Navbar -->
- 		<div class="navbar-header">
+<div id="wrapper"	>
+ 	<!-- <div class="navbar navbar-fixed-top navbar-inverse" role="navigation"> --> <!-- Navbar -->
+ 	<!--  	<div class="navbar-header">
  			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
  			<span class="sr-only">Toggle Navigation</span>
  			<span class="icon-bar"></span>
@@ -22,7 +24,7 @@
  		<div class="navbar-collapse collapse">
  			<ul class="nav navbar-nav">
  				<li class="active"><a href="#">Home</a></li>
- 				<li><a href="#">DoIt</a></li>
+ 				<li><a href="#">DoIt1</a></li>
  				<li><a data-toggle="modal" href="#myModal" >Contact Us</a></li>
  				<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -49,51 +51,11 @@
      <a href="http://localhost:8080/bookmarkit/login" class="btn btn-link">Sign In</a>
       </form>
  		</div>
- 	</div>	<!-- navbar ends -->
+ 	</div>-->	<!-- navbar ends -->
  	
- 	<div class="container"> <!-- container -->
- 	 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="<c:url value="/resources/images/1.jpg" />" alt="First slide" class="img-responsive">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="<c:url value="/resources/images/2.jpg" />" alt="Second slide" class="img-responsive">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Hardik Joshi</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="<c:url value="/resources/images/3.jpg" />" alt="Third slide" class="img-responsive">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div><!-- /.carousel -->
+ 	<div class="container">
+ 	 <!-- container -->
+ 	 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -109,7 +71,7 @@
         		<input type="text" class="form-control" id="contact-name" placeholder="Full Name">
         	</div>
         </div>
-        
+         
         <div class="fomr-group">
         	<label class="col-lg-2 control-label" for="contact-name">Email:</label>
         	<div class="col-lg-10">
@@ -133,6 +95,40 @@
   </div>
 </div>
  </div> <!-- container ends -->
+
+ 
+ <div id="signup">
+ <div id="btn-signin">
+  <a href="http://localhost:8080/bookmarkit/login">Log In</a>
+ 
+  </div>
+ 		<h1 class="form-signin-heading">bookmarkIt</h1>
+        <h3 class="form-signin-heading">Create your own world.Share things you love.</h3>
+ 	<form class="form-signin" role="form" method="POST" action="/bookmarkit/signUp">
+        
+       	 <input type="email" class="form-control" name="email" placeholder="Email address" required autofocus>
+         <input type="text" class="form-control" name="uname" placeholder="Username" required>
+         <input type="text" class="form-control" name="fname" placeholder="First Name" required>
+         <input type="text" class="form-control" name="lname" placeholder="Last Name" required>
+        
+         <input type="password" class="form-control" name="password" placeholder="Password" required>
+         Gender:
+         <input type="radio" name="gender" value="male">Male &nbsp;&nbsp;
+		 <input type="radio" name="gender" value="female">Female
+        
+      
+        <button class="btn btn-lg btn-primary btn-block btn-signup" type="submit">Sign up</button>
+      </form>
+   </div>   
+   <div id="mac">
+  	<img src="<c:url value="/resources/images/1.jpg" />" class="img1" width="100%" height="100%">
+  	<img src="<c:url value="/resources/images/2.jpg" />" class="img2" width="100%" height="100%">
+  	<img src="<c:url value="/resources/images/3.jpg" />" class="img3" width="100%" height="100%">
+  	<img src="<c:url value="/resources/images/4.jpg" />" class="img4" width="100%" height="100%">
+  	<img src="<c:url value="/resources/images/5.jpg" />" class="img5" width="100%" height="100%">
+  	<img src="<c:url value="/resources/images/6.jpg" />" class="img6" width="100%" height="100%">
+   </div>
+</div> <!-- wrapper ends --> 
  
  
  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
@@ -141,6 +137,6 @@
 
 <script type='text/javascript' src="http://imsky.github.io/holder/holder.js"></script>
 
-	
+
 </body>
 </html>

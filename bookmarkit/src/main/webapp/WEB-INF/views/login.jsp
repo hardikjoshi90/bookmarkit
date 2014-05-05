@@ -7,11 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<link href="<c:url value="/resources/css/bootstrap-responsive.min.css" />" rel="stylesheet">
 	<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
-	<link href="<c:url value="/resources/css/fixed-top.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
 	<link href="<c:url value="/resources/css/login.css" />" rel="stylesheet">
 	<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 	
-<title>Insert title here</title>
+<title>Bookmarkit</title>
 </head>
 <body>
 <div id="fb-root"></div>
@@ -87,124 +87,41 @@
 	    }
 	});
 </script>
- <form class="form-horizontal" method="post" action="/doit/login/" ModelAttribute="login">
-  <div class="navbar navbar-fixed-top navbar-inverse" role="navigation"> <!-- Navbar -->
- 		<div class="navbar-header">
- 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
- 			<span class="sr-only">Toggle Navigation</span>
- 			<span class="icon-bar"></span>
- 			<span class="icon-bar"></span>
- 			<span class="icon-bar"></span>
- 			</button>
- 			<a class="navbar-brand" href="#">Project Name</a>
- 		</div>
- 		<div class="navbar-collapse collapse">
- 			<ul class="nav navbar-nav">
- 				<li class="active"><a href="#">Home</a></li>
- 				<li><a href="#">DoIt</a></li>
- 				<li><a data-toggle="modal" href="#myModal" >Contact Us</a></li>
- 				<li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-          
-        </li>
- 			</ul>
- 	</div>	<!-- navbar ends -->
-</div>
+ 
  <div class="container"> <!-- container -->
-<div class="container login">
-    <div class="row ">
-        <div class="center span4 well">
-            <legend>Please Sign In</legend>
-            <input type="text" id="username"  name="username" placeholder="Username" />
-            <input type="password" id="password" name="password" placeholder="Password" />
-            <label class="checkbox">
-                <input type="checkbox" name="remember" value="1" /> Remember Me
-            </label>
-            <button type="submit" name="submit" class="btn btn-primary btn-block">Sign in</button>
-            <br>
-            <fb:login-button show-faces="true" width="200" max-rows="2">Connect With Facebook</fb:login-button>
-        </div>
-    </div>
-</div>
-<p class="text-center muted ">&copy; Copyright 2013 - Powered by Hardik Joshi</p>
+
+    
 <!-- Main Container Ends -->
 
-<!-- Contact Us Model Box -->
-<div id="contact" class="modal hide fade in" style="display: none; ">
-<div class="modal-header">
-<a class="close" data-dismiss="modal">×</a>
-<h3>Contact Us</h3>
-</div>
-<div class="modal-body">
-<form>
-      <div class="controls controls-row">
-          <input id="name" name="name" type="text" class="span3" placeholder="Name" />
-      </div>
+
  
-       <div class="controls controls-row">
-       <input id="email" name="email" type="email" class="span3" placeholder="Email address" />
-       </div>
- 
-      <div class="controls">
-          <textarea id="message" name="message" class="span5" placeholder="Your Message" rows="5"></textarea>
-      </div>
- 
-  </form>
-</div>
- 
-<div class="modal-footer">
-<a href="#" class="btn btn-primary">Submit</a>
-<a href="#" class="btn" data-dismiss="modal">Close</a>
-</div>
-</div>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-    <form class="form-horizontal">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Contact Us:</h4>
-      </div>
-      <div class="modal-body">
-        <div class="fomr-group">
-        	<label class="col-lg-2 control-label" for="contact-name">Name:</label>
-        	<div class="col-lg-10">
-        		<input type="text" class="form-control" id="contact-name" placeholder="Full Name">
-        	</div>
-        </div>
-        
-        <div class="fomr-group">
-        	<label class="col-lg-2 control-label" for="contact-name">Email:</label>
-        	<div class="col-lg-10">
-        		<input type="text" class="form-control" id="contact-email" placeholder="you@example.com">
-        	</div>
-        </div>
-        
-        <div class="fomr-group">
-        	<label class="col-lg-2 control-label" for="contact-msg">Message:</label>
-        	<div class="col-lg-10">
-        		<textarea class="form-control" rows="8"></textarea>
-        	</div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
+
+
  </div> <!-- container ends -->
+ 
+ 
+ <div id="signup">
+ 		<h1 class="form-signin-heading">bookmarkIt</h1>
+        <h3 class="form-signin-heading">Create your own world.Share things you love.</h3>
+ 	<form class="form-signin" role="form" method="post" action="/bookmarkit/login">
+         <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
+       	 <input type="password" class="form-control" name="password" placeholder="Password" required>
+        
+        <button class="btn btn-lg btn-primary btn-block btn-signup" type="submit">Sign in</button>
+      <br/>
+      <fb:login-button show-faces="true" width="200" max-rows="2">Connect With Facebook</fb:login-button>
+  	</form>
+   </div>   
+   <div>
+  <%-- 	<img src="<c:url value="/resources/images/1.jpg" />" class="img1" width="100%" height="100%">
+  	<img src="<c:url value="/resources/images/2.jpg" />" class="img2" width="100%" height="100%">
+  	<img src="<c:url value="/resources/images/3.jpg" />" class="img3" width="100%" height="100%"> --%>
+  	<img src="<c:url value="/resources/images/4.jpg" />" class="img4" width="100%" height="100%">
+  	<%-- <img src="<c:url value="/resources/images/5.jpg" />" class="img5" width="100%" height="100%">
+  	<img src="<c:url value="/resources/images/6.jpg" />" class="img6" width="100%" height="100%"> --%>
+   </div>
+</div> <!-- wrapper ends --> 
+ 
  
  
  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>

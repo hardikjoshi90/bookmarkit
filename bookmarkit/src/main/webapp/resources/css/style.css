@@ -1,0 +1,482 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+@import url(http://fonts.googleapis.com/css?family=Lily+Script+One);
+
+body {
+	background-color: #fff;
+	width: 100%;
+  	height: 100%;
+}
+
+#wrapper {
+	background:#fff;
+	height:100%;
+} 
+
+@-webkit-keyframes macFadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@-moz-keyframes macFadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@-o-keyframes macFadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@keyframes macFadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+#mac,#signup {
+  position:absolute;
+  margin:0 auto;
+}
+
+#mac {
+	width:100%;
+	height:100%;
+}
+
+#signup{
+	position:fixed;
+	z-index:10;
+	background-color:#fff;
+	border-radius:3px;
+	margin: 8% 38%;
+	padding : 40px;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
+	max-width:380px;
+	color:black;
+}
+#mac img {
+  position:absolute;
+  left:0;
+}
+
+#btn-signin{
+	position:fixed;
+	z-index:10;
+	right:20px;
+	top:20px;
+	background-color:rgba(255,255,255,0.33);
+	display:block;
+	color:#fff;
+	padding: 10px 20px;
+	font-family: Arial;
+	font-weight:bold;
+	border-radius:3px;
+	font-size:16px;
+}
+
+#btn-signout a{
+	position:fixed;
+	z-index:10;
+	right:20px;
+	top:20px;
+	background-color:rgba(255,255,255,0.33);
+	display:block;
+	color:#fff;
+	padding: 12px 22px;
+	font-family: Arial;
+	font-weight:bold;
+	border-radius:3px;
+	font-size:18px;
+}
+
+#mac img {
+  -webkit-animation-name: macFadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 30s;
+
+  -moz-animation-name: macFadeInOut;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 30s;
+
+  -o-animation-name: macFadeInOut;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 30s;
+
+  animation-name: macFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+}
+
+#mac img:nth-of-type(1) {
+  -webkit-animation-delay: 25s;
+  -moz-animation-delay:25s;
+  -o-animation-delay: 25s;
+  animation-delay: 25s;
+}
+
+#mac img:nth-of-type(2) {
+  -webkit-animation-delay: 20s;
+  -moz-animation-delay: 20s;
+  -o-animation-delay: 20s;
+  animation-delay: 20s;
+}
+
+#mac img:nth-of-type(3) {
+  -webkit-animation-delay: 15s;
+  -moz-animation-delay: 15s;
+  -o-animation-delay: 15s;
+  animation-delay: 15s;
+}
+
+#mac img:nth-of-type(4) {
+  -webkit-animation-delay: 10s;
+  -moz-animation-delay: 10s;
+  -o-animation-delay: 10s;
+  animation-delay: 10s;
+}
+
+
+#mac img:nth-of-type(5) {
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+#mac img:nth-of-type(6) {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+
+.form-signin {
+  max-width: 250px;
+  padding: 15px;
+  margin: 0 auto;
+  
+}
+.form-signin .form-signin-heading {
+  margin-bottom: 5px;
+  color: #c92228;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input{
+  margin-bottom: -1px;
+  border-radius:0px;
+  
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-radius:0px;
+}
+
+.btn-signup{
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius:0;
+}
+
+#signup h1,h2,h3 {
+	color:white;
+	text-align:center;
+}
+
+#signup h1{
+	font-weight:900;
+	font-size: 60px;
+	margin:0 auto;
+	padding:10px;
+	margin-left:-20px;
+	color:#c92228;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+	font-family:"Lily Script One",Arial,Serif; 
+}
+
+#projectTitle{
+	font-size: 20px;
+	margin:0 auto;
+	padding:5px;
+	background-color: #c92228;
+	text-shadow: 1px 1px rgba(255,255,255,0.8);
+	font-family:"Lily Script One",Arial,Serif;
+ -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+#signup h3{
+	font-weight:300;
+	font-size:16px;
+	margin:0 auto;
+	color:black;
+}
+
+.add{
+position:absolute;
+z-index:10;
+margin: 110px 90px;
+}
+
+.board{
+width:230px;
+height:270px;
+border: 2px dashed #aaa;
+background-color:#eee;
+color: #aaa;
+font-family:sans-serif;
+font-size:15px;
+font-weight:bold;
+margin-left:25px;
+margin-top:25px;
+display:inline-block;
+vertical-align:top;
+}
+
+.addpin{
+width:230px;
+height:270px;
+border: 2px dashed #aaa;
+background-color:#eee;
+color: #aaa;
+font-family:sans-serif;
+font-size:15px;
+font-weight:bold;
+margin-left:25px;
+margin-top:25px;
+display:inline-block;
+vertical-align:top;
+}
+
+.pins{
+width:230px;
+height:270px;
+border: 2px dashed #aaa;
+background-color:#eee;
+color: #aaa;
+font-family:sans-serif;
+font-size:15px;
+font-weight:bold;
+margin-left:25px;
+margin-top:25px;
+display:inline-block;
+vertical-align:top;
+}
+
+.board1{
+width:230px;
+height:270px;
+border: 2px dashed #aaa;
+background-color:#eee;
+color: #aaa;
+font-family:sans-serif;
+font-size:15px;
+font-weight:bold;
+margin-left:25px;
+margin-top:25px;
+display:inline-block;
+vertical-align:top;
+text-align:center;
+padding-top:8px;
+}
+
+.boarddetails{
+border:1px solid #666;
+background-color:#ccc;
+width:90%;
+height:65%;
+margin:10px auto;
+}
+
+.deleteboards{
+	width:43%;
+	height:17%;
+	margin:0 auto;
+	margin-left:5px;
+}
+
+
+.board:hover{
+background-color:#ddd;
+}
+
+.board:hover > .text{
+color:#888;
+}
+
+.board1:hover{
+background-color:#ddd;
+}
+
+.board1:hover > .text{
+color:#888;
+}
+
+.text{
+text-align: center;
+vertical-align: middle;
+display:block;
+margin-top:70%;
+text-shadow: 0px 1x 0px #cdcdcd;
+}
+
+#publicboard{
+	background-color:#eee;
+	padding: 50px 0;
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.8);   
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.8);   
+    box-shadow: 0 0 5px rgba(0,0,0,0.8); 
+}
+
+#pinboard{
+	background-color:#eee;
+	padding: 50px 0;
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.8);   
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.8);   
+    box-shadow: 0 0 5px rgba(0,0,0,0.8); 
+}
+
+#container1{
+	min-height:100px;
+}
+
+
+#privateboard{
+	background: #ddd;
+	padding: 50px 0;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.8);   
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.8);   
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);     
+}
+
+.ribbon {
+ font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+font-family:"Lily Script One",Arial,Serif;
+ width: 15%;
+   -moz-box-shadow: 0 0 10px rgba(0,0,0,0.8);   
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.8);   
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);      
+ position: relative;
+ background: #c92228;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 1em auto 1.5em;
+ /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #ae2228;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #882228 transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+
+.block{
+	width:230px;
+	height:270px;
+	background-color:red;
+	display:inline-block;
+	margin-left:25px;
+	margin-bottom:85px
+}
+
