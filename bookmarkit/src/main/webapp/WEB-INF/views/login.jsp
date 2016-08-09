@@ -113,12 +113,12 @@
   	</form>
    </div>   
    <div>
-  <%-- 	<img src="<c:url value="/resources/images/1.jpg" />" class="img1" width="100%" height="100%">
+  	<img src="<c:url value="/resources/images/1.jpg" />" class="img1" width="100%" height="100%">
   	<img src="<c:url value="/resources/images/2.jpg" />" class="img2" width="100%" height="100%">
-  	<img src="<c:url value="/resources/images/3.jpg" />" class="img3" width="100%" height="100%"> --%>
+  	<img src="<c:url value="/resources/images/3.jpg" />" class="img3" width="100%" height="100%"> 
   	<img src="<c:url value="/resources/images/4.jpg" />" class="img4" width="100%" height="100%">
-  	<%-- <img src="<c:url value="/resources/images/5.jpg" />" class="img5" width="100%" height="100%">
-  	<img src="<c:url value="/resources/images/6.jpg" />" class="img6" width="100%" height="100%"> --%>
+  	<img src="<c:url value="/resources/images/5.jpg" />" class="img5" width="100%" height="100%">
+  	<img src="<c:url value="/resources/images/6.jpg" />" class="img6" width="100%" height="100%"> 
    </div>
 </div> <!-- wrapper ends --> 
  
